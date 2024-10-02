@@ -59,10 +59,6 @@
                   <a class="portfolio-link" data-bs-toggle="modal" href="#<?php echo $item['id']; ?>">
                       <img class="img-fluid" src="<?php echo $item['image']; ?>" alt="<?php echo $item['title']; ?>" />
                   </a>
-                  <div class="portfolio-caption">
-                      <h4><?php echo $item['title']; ?></h4>
-                      <p class="text-muted"><?php echo $item['description']; ?></p>
-                  </div>
               </div>
           </div>
           <?php
