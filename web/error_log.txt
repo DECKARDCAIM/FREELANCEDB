@@ -52,3 +52,9 @@
 [02-Oct-2024 03:30:53 UTC] PHP Warning:  include(): Failed opening 'items/portfolio_item_six.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 20
 [02-Oct-2024 03:35:36 UTC] PHP Warning:  include(pages/portfolio/portfolio_items.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\template.php on line 34
 [02-Oct-2024 03:35:36 UTC] PHP Warning:  include(): Failed opening 'pages/portfolio/portfolio_items.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\template.php on line 34
+[02-Oct-2024 04:02:55 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
+[02-Oct-2024 04:02:55 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
+[02-Oct-2024 04:02:55 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
+[02-Oct-2024 04:02:55 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
+[02-Oct-2024 04:02:55 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
+[02-Oct-2024 04:02:55 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56

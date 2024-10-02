@@ -11,54 +11,25 @@
     <!-- Portfolio Grid Items-->
     <div class="row justify-content-center">
       <?php
-      // Definir los elementos del portafolio en un array
       $portfolio_items = [
-          [
-              'title' => 'Cabin',
-              'image' => 'views/assets/img/portfolio/cabin.png',
-              'description' => 'Un proyecto creativo en una cabaña.',
-              'id' => 'modalCabin'
-          ],
-          [
-              'title' => 'Cake',
-              'image' => 'views/assets/img/portfolio/cake.png',
-              'description' => 'Pastel decorado para un evento especial.',
-              'id' => 'modalCake'
-          ],
-          [
-              'title' => 'Circus',
-              'image' => 'views/assets/img/portfolio/circus.png',
-              'description' => 'Escena inspirada en el circo.',
-              'id' => 'modalCircus'
-          ],
-          [
-              'title' => 'Game',
-              'image' => 'views/assets/img/portfolio/game.png',
-              'description' => 'Desarrollo de un videojuego creativo.',
-              'id' => 'modalGame'
-          ],
-          [
-              'title' => 'Safe',
-              'image' => 'views/assets/img/portfolio/safe.png',
-              'description' => 'Caja fuerte para mantener la seguridad.',
-              'id' => 'modalSafe'
-          ],
-          [
-              'title' => 'Submarine',
-              'image' => 'views/assets/img/portfolio/submarine.png',
-              'description' => 'Un submarino explorando las profundidades del océano.',
-              'id' => 'modalSubmarine'
-          ]
+          ['title' => 'Cabin', 'image' => 'views/assets/img/portfolio/cabin.png', 'id' => 'modalCabin'],
+          ['title' => 'Cake', 'image' => 'views/assets/img/portfolio/cake.png', 'id' => 'modalCake'],
+          ['title' => 'Circus', 'image' => 'views/assets/img/portfolio/circus.png', 'id' => 'modalCircus'],
+          ['title' => 'Game', 'image' => 'views/assets/img/portfolio/game.png', 'id' => 'modalGame'],
+          ['title' => 'Safe', 'image' => 'views/assets/img/portfolio/safe.png', 'id' => 'modalSafe'],
+          ['title' => 'Submarine', 'image' => 'views/assets/img/portfolio/submarine.png', 'id' => 'modalSubmarine']
       ];
 
-      // Mostrar los ítems del portafolio
       foreach ($portfolio_items as $item) {
           ?>
           <div class="col-md-6 col-lg-4 mb-5">
-              <div class="portfolio-item mx-auto">
-                  <a class="portfolio-link" data-bs-toggle="modal" href="#<?php echo $item['id']; ?>">
-                      <img class="img-fluid" src="<?php echo $item['image']; ?>" alt="<?php echo $item['title']; ?>" />
-                  </a>
+              <div class="portfolio-item mx-auto" data-bs-toggle="modal" href="#<?php echo $item['id']; ?>">
+                  <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                      <div class="portfolio-item-caption-content text-center text-white">
+                          <i class="fas fa-plus fa-3x"></i>
+                      </div>
+                  </div>
+                  <img class="img-fluid" src="<?php echo $item['image']; ?>" alt="<?php echo $item['title']; ?>" />
               </div>
           </div>
           <?php
