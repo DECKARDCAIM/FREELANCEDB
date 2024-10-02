@@ -58,3 +58,9 @@
 [02-Oct-2024 04:02:55 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
 [02-Oct-2024 04:02:55 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
 [02-Oct-2024 04:02:55 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
+[02-Oct-2024 04:08:02 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
+[02-Oct-2024 04:08:02 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
+[02-Oct-2024 04:08:02 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
+[02-Oct-2024 04:08:02 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
+[02-Oct-2024 04:08:02 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
+[02-Oct-2024 04:08:02 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
