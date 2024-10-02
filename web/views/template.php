@@ -20,7 +20,7 @@ $path = TemplateController::path();
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
   <!-- Core theme CSS (includes Bootstrap)-->
-  <link href="<?php echo $path ?>/views/assets/css/styles.css" rel="stylesheet" />
+  <link href="<?php echo $path ?>views/assets/css/styles.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
