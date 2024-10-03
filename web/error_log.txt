@@ -510,3 +510,13 @@ Stack trace:
 #3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
 #4 {main}
   thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 10:19:48 UTC] PHP Warning:  require_once(controllers/controller.template.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\index.php on line 8
+[03-Oct-2024 10:19:48 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'controllers/controller.template.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\freelance\web\index.php on line 8
+[03-Oct-2024 10:19:51 UTC] PHP Warning:  require_once(controllers/controller.template.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\index.php on line 8
+[03-Oct-2024 10:19:51 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'controllers/controller.template.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\freelance\web\index.php on line 8

@@ -20,6 +20,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_portfolio_item']))
     // Insertar el nuevo ítem en la base de datos
     $stmt = $pdo->prepare("INSERT INTO portfolio_items (title, image, description, github, web, user_id) VALUES (?, ?, ?, ?, ?, ?)");
     $stmt->execute([$title, $image, $description, $github, $web, $user_id]);
+
+    // Mostrar alerta de éxito
+    echo "<script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Éxito',
+            text: '¡Ítem de portafolio agregado exitosamente!',
+            confirmButtonText: 'OK'
+        });
+    </script>";
 }
 
 // Eliminar un ítem del portafolio
@@ -27,14 +37,27 @@ if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
     $stmt = $pdo->prepare("DELETE FROM portfolio_items WHERE id = ?");
     $stmt->execute([$id]);
-    header("Location: dashboard.php#portfolio");
-    exit();
+    echo "<script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Eliminado',
+            text: '¡Ítem de portafolio eliminado exitosamente!',
+            confirmButtonText: 'OK'
+        }).then(() => {
+            window.location.href = 'dashboard.php#portfolio';
+        });
+    </script>";
 }
 
 // Obtener todos los ítems del portafolio
 $stmt = $pdo->prepare("SELECT * FROM portfolio_items WHERE user_id = ?");
 $stmt->execute([$_SESSION['user_id']]);
 $portfolio_items = $stmt->fetchAll();
+
+// Obtener todos los mensajes de contacto
+$stmt_contact = $pdo->prepare("SELECT * FROM contact_me");
+$stmt_contact->execute();
+$contacts = $stmt_contact->fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -45,6 +68,7 @@ $portfolio_items = $stmt->fetchAll();
     <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert -->
     <style>
         /* Estilos personalizados */
         body, html {
@@ -238,6 +262,34 @@ $portfolio_items = $stmt->fetchAll();
                     </tbody>
                 </table>
             </div>
+
+            <!-- Sección de Contacto -->
+            <div id="contact" class="section" style="display: none;">
+                <h1>Mensajes de Contacto</h1>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Teléfono</th>
+                            <th>Mensaje</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($contacts as $contact): ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($contact['full_name'], ENT_QUOTES, 'UTF-8'); ?></td>
+                                <td><?php echo htmlspecialchars($contact['email_address'], ENT_QUOTES, 'UTF-8'); ?></td>
+                                <td><?php echo htmlspecialchars($contact['phone_number'], ENT_QUOTES, 'UTF-8'); ?></td>
+                                <td><?php echo htmlspecialchars($contact['message'], ENT_QUOTES, 'UTF-8'); ?></td>
+                                <td><?php echo $contact['created_at']; ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
 </div>
@@ -262,7 +314,7 @@ $portfolio_items = $stmt->fetchAll();
         });
     });
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
