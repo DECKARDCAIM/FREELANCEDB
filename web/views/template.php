@@ -27,15 +27,27 @@ $path = TemplateController::path();
 
   <div class="wrapper">
 
-    <?php
+  <?php
 
+$path = TemplateController::path();
+
+$page = isset($_GET['page']) ? $_GET['page'] : '';
+
+if ($page == 'login') {
+    include 'pages/login.php';
+} elseif ($page == 'dashboard') {
+    include 'pages/dashboard.php';
+} else {
     include 'modules/nav.php';
     include 'modules/header.php';
     include 'pages/portfolio/portfolio.php';
     include 'pages/contact/contact.php';
     include 'modules/footer.php';
     include 'modules/copyright.php';
-    ?>
+}
+
+?>
+
 
 
 

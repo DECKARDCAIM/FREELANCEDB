@@ -64,3 +64,7 @@
 [02-Oct-2024 04:08:02 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
 [02-Oct-2024 04:08:02 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
 [02-Oct-2024 04:08:02 UTC] PHP Warning:  Undefined array key "description" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 56
+[02-Oct-2024 05:54:08 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "web", expecting "]" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 22
+[02-Oct-2024 05:54:15 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "web", expecting "]" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 22
+[02-Oct-2024 05:54:17 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "web", expecting "]" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 22
+[02-Oct-2024 05:54:20 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "web", expecting "]" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 22
