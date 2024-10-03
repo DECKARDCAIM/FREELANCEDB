@@ -2,7 +2,7 @@
 <section class="page-section" id="contact">
     <div class="container">
         <!-- Contact Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contactame</h2>
         <!-- Icon Divider-->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -16,23 +16,23 @@
                     <div class="form-floating mb-3">
                         <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..."
                             required />
-                        <label for="name">Full name</label>
+                        <label for="name">Nombre Completo</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com"
                             required />
-                        <label for="email">Email address</label>
+                        <label for="email">Correo Electronico</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" />
-                        <label for="phone">Phone number</label>
+                        <label for="phone">Telefono</label>
                     </div>
                     <div class="form-floating mb-3">
                         <textarea class="form-control" id="message" name="message"
                             placeholder="Enter your message here..." style="height: 10rem" required></textarea>
-                        <label for="message">Message</label>
+                        <label for="message">Mensaje</label>
                     </div>
-                    <button class="btn btn-primary btn-xl" type="submit">Send</button>
+                    <button class="btn btn-primary btn-xl" type="submit">Enviar</button>
                 </form>
 
 
