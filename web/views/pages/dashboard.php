@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
+    header('Location: /freelance/web/views/pages/login.php'); // Redirige a la página de inicio de sesión
     exit();
 }
 ?>
@@ -39,6 +39,18 @@ if (!isset($_SESSION['user_id'])) {
             width: 80px;
         }
 
+        #sidebar-wrapper.collapsed .list-group-item {
+            text-align: center;
+        }
+
+        #sidebar-wrapper.collapsed .list-group-item i {
+            margin-right: 0;
+        }
+
+        #sidebar-wrapper.collapsed .list-group-item span {
+            display: none;
+        }
+
         #sidebar-wrapper .list-group-item {
             background-color: #343a40;
             color: white;
@@ -51,10 +63,17 @@ if (!isset($_SESSION['user_id'])) {
         }
 
         #sidebar-wrapper .sidebar-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-size: 1.5rem;
             padding: 1rem;
             background-color: #212529;
-            text-align: center;
+        }
+
+        #sidebar-wrapper.collapsed .sidebar-heading {
+            font-size: 1.5rem;
+            padding: 0.5rem;
         }
 
         #page-content-wrapper {
@@ -80,6 +99,7 @@ if (!isset($_SESSION['user_id'])) {
             background-color: #dc3545;
             color: white;
             border: none;
+            margin-left: 10px;
         }
 
         .btn-logout:hover {
@@ -115,6 +135,13 @@ if (!isset($_SESSION['user_id'])) {
         .list-group-item i {
             margin-right: 10px;
         }
+
+        /* Ajuste del ícono ☰ en el panel lateral */
+        .sidebar-heading .btn-toggle {
+            padding: 0;
+            background: none;
+            color: white;
+        }
     </style>
 </head>
 
@@ -122,19 +149,18 @@ if (!isset($_SESSION['user_id'])) {
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class="border-end bg-dark" id="sidebar-wrapper">
-            <div class="sidebar-heading text-white">Dashboard</div>
+            <div class="sidebar-heading text-white">
+                <button class="btn-toggle" id="menu-toggle">☰</button>
+            </div>
             <div class="list-group list-group-flush">
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#home">
-                    <i class="fas fa-home"></i> Dashboard
+                    <i class="fas fa-home"></i> <span>Dashboard</span>
                 </a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#portfolio">
-                    <i class="fas fa-briefcase"></i> Portafolio
+                    <i class="fas fa-briefcase"></i> <span>Portafolio</span>
                 </a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#contact">
-                    <i class="fas fa-envelope"></i> Contactanos
-                </a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3 btn-logout" href="logout.php">
-                    <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+                    <i class="fas fa-envelope"></i> <span>Contactanos</span>
                 </a>
             </div>
         </div>
@@ -143,8 +169,8 @@ if (!isset($_SESSION['user_id'])) {
         <div id="page-content-wrapper">
             <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
                 <div class="container-fluid">
-                    <button class="btn btn-toggle" id="menu-toggle">Toggle Sidebar</button>
                     <a href="/freelance/web/" class="btn btn-web ms-auto">Ir a la web</a>
+                    <a href="/freelance/web/views/pages/logout.php" class="btn btn-logout">Cerrar sesión</a>
                 </div>
             </nav>
 
@@ -169,18 +195,21 @@ if (!isset($_SESSION['user_id'])) {
 
     <script>
         // Alternar el menú de la barra lateral
-        document.getElementById("menu-toggle").addEventListener("click", function() {
+        document.getElementById("menu-toggle").addEventListener("click", function () {
             document.getElementById("sidebar-wrapper").classList.toggle("collapsed");
         });
 
         // Cambiar entre secciones
         const sections = document.querySelectorAll('.section');
         document.querySelectorAll('.list-group-item').forEach(item => {
-            item.addEventListener('click', function(event) {
+            item.addEventListener('click', function (event) {
                 event.preventDefault();
                 sections.forEach(section => section.style.display = 'none');
                 const target = item.getAttribute('href').substring(1);
-                document.getElementById(target).style.display = 'block';
+                const targetSection = document.getElementById(target);
+                if (targetSection) {
+                    targetSection.style.display = 'block';
+                }
             });
         });
     </script>
