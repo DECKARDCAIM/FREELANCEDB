@@ -68,3 +68,445 @@
 [02-Oct-2024 05:54:15 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "web", expecting "]" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 22
 [02-Oct-2024 05:54:17 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "web", expecting "]" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 22
 [02-Oct-2024 05:54:20 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "web", expecting "]" in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 22
+[03-Oct-2024 09:17:27 UTC] PHP Warning:  include(/path_to_db_connection.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 3
+[03-Oct-2024 09:17:27 UTC] PHP Warning:  include(): Failed opening '/path_to_db_connection.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 3
+[03-Oct-2024 09:17:27 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 6
+[03-Oct-2024 09:17:27 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:6
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 6
+[03-Oct-2024 09:17:35 UTC] PHP Warning:  include(/path_to_db_connection.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 3
+[03-Oct-2024 09:17:35 UTC] PHP Warning:  include(): Failed opening '/path_to_db_connection.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 3
+[03-Oct-2024 09:17:35 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 6
+[03-Oct-2024 09:17:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:6
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 6
+[03-Oct-2024 09:18:18 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 3
+[03-Oct-2024 09:18:18 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 3
+[03-Oct-2024 09:18:18 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 6
+[03-Oct-2024 09:18:18 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:6
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 6
+[03-Oct-2024 09:18:20 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 3
+[03-Oct-2024 09:18:20 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 3
+[03-Oct-2024 09:18:20 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 6
+[03-Oct-2024 09:18:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:6
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 6
+[03-Oct-2024 09:20:24 UTC] PHP Warning:  include(views/database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:20:24 UTC] PHP Warning:  include(): Failed opening 'views/database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:20:24 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:20:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:21:55 UTC] PHP Warning:  include(views/database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:21:55 UTC] PHP Warning:  include(): Failed opening 'views/database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:21:55 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:21:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:24:21 UTC] PHP Warning:  include(views/database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:24:21 UTC] PHP Warning:  include(): Failed opening 'views/database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:24:21 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:24:21 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:29:01 UTC] PHP Warning:  include(views/database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:29:01 UTC] PHP Warning:  include(): Failed opening 'views/database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:29:01 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:29:01 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:29:16 UTC] PHP Warning:  include(views/database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:29:16 UTC] PHP Warning:  include(): Failed opening 'views/database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:29:16 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:29:16 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:30:02 UTC] PHP Warning:  include(views/database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:30:02 UTC] PHP Warning:  include(): Failed opening 'views/database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:30:02 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:30:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:30:54 UTC] PHP Warning:  include(views/database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:30:54 UTC] PHP Warning:  include(): Failed opening 'views/database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:30:54 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:30:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:30:56 UTC] PHP Warning:  include(views/database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:30:56 UTC] PHP Warning:  include(): Failed opening 'views/database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:30:56 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:30:56 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:32:02 UTC] PHP Warning:  include(../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:32:02 UTC] PHP Warning:  include(): Failed opening '../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:32:02 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:32:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:32:07 UTC] PHP Warning:  include(../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:32:07 UTC] PHP Warning:  include(): Failed opening '../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:32:07 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:32:07 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:32:34 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:32:34 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:32:34 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:32:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:32:35 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:32:35 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:32:35 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:32:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:32:36 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:32:36 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:32:36 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:32:36 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:32:37 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:32:37 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:32:37 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:32:37 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:32:37 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:32:37 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:32:37 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:32:37 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:32:37 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:32:37 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:32:37 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:32:37 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:34:42 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:34:42 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 15
+[03-Oct-2024 09:34:42 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:34:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:18
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 18
+[03-Oct-2024 09:36:57 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:36:57 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:36:57 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:36:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:36:58 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:36:58 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:36:58 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:36:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:36:59 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:36:59 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:36:59 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:36:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:36:59 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:36:59 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:36:59 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:36:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:36:59 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:36:59 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:36:59 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:36:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(43): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:37:51 UTC] PHP Warning:  include(../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\template.php on line 5
+[03-Oct-2024 09:37:51 UTC] PHP Warning:  include(): Failed opening '../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\template.php on line 5
+[03-Oct-2024 09:37:51 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:37:51 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:37:51 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:37:51 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(45): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:39:33 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:39:33 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:39:33 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:39:33 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(44): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:39:44 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:39:44 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:39:44 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:39:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(44): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:39:57 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:39:57 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:39:57 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:39:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(44): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:40:00 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:40:00 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:40:00 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:40:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(44): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:44:04 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:44:04 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:44:04 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:44:04 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(44): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:48:25 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:48:25 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:48:25 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:48:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(44): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:48:27 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:48:27 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:48:27 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:48:27 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(44): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:51:08 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:51:08 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:51:08 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:51:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(44): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:51:14 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:51:14 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:51:14 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:51:14 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(44): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:51:35 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:51:35 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:51:35 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:51:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(44): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:52:40 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:52:40 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:52:40 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:52:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(44): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:55:23 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:55:23 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:55:23 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:55:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(44): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:55:27 UTC] PHP Warning:  include(../../../../database/db.php): Failed to open stream: No such file or directory in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:55:27 UTC] PHP Warning:  include(): Failed opening '../../../../database/db.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 16
+[03-Oct-2024 09:55:27 UTC] PHP Warning:  Undefined variable $pdo in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19
+[03-Oct-2024 09:55:27 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php:19
+Stack trace:
+#0 C:\laragon\www\freelance\web\views\pages\portfolio\portfolio.php(3): include()
+#1 C:\laragon\www\freelance\web\views\template.php(44): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\freelance\web\controllers\controller.template.php(8): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\freelance\web\index.php(11): TemplateController->index()
+#4 {main}
+  thrown in C:\laragon\www\freelance\web\views\pages\portfolio\modules\portfolio_main.php on line 19

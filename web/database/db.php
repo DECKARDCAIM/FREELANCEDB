@@ -1,9 +1,14 @@
 <?php
+// Conexión a la base de datos
+$host = 'localhost';
+$dbname = 'portafolio';
+$username = 'root'; // Ajustar según tus credenciales
+$password = 'CAllofduty123@%'; // Ajustar según tus credenciales
+
 try {
-    $pdo = new PDO("mysql:host=localhost;dbname=portafolio", "root", "CAllofduty123@%");
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    echo "Error de conexión: " . $e->getMessage();
-    exit();
+    die("Error en la conexión: " . $e->getMessage());
 }
 ?>

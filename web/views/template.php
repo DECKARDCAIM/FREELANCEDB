@@ -1,6 +1,7 @@
 <?php
 
 $path = TemplateController::path();
+
 ?>
 
 <!DOCTYPE html>

@@ -8,67 +8,38 @@
       <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
       <div class="divider-custom-line"></div>
     </div>
+
     <!-- Portfolio Grid Items-->
     <div class="row justify-content-center">
       <?php
-      // Definir los elementos del portafolio en un array
-      $portfolio_items = [
-        [
-          'title' => 'Cabin',
-          'image' => 'views/assets/img/portfolio/cabin.png',
-          'description' => 'Un proyecto creativo en una cabaña.',
-          'id' => 'modalCabin'
-        ],
-        [
-          'title' => 'Cake',
-          'image' => 'views/assets/img/portfolio/cake.png',
-          'description' => 'Pastel decorado para un evento especial.',
-          'id' => 'modalCake'
-        ],
-        [
-          'title' => 'Circus',
-          'image' => 'views/assets/img/portfolio/circus.png',
-          'description' => 'Escena inspirada en el circo.',
-          'id' => 'modalCircus'
-        ],
-        [
-          'title' => 'Game',
-          'image' => 'views/assets/img/portfolio/game.png',
-          'description' => 'Desarrollo de un videojuego creativo.',
-          'id' => 'modalGame'
-        ],
-        [
-          'title' => 'Safe',
-          'image' => 'views/assets/img/portfolio/safe.png',
-          'description' => 'Caja fuerte para mantener la seguridad.',
-          'id' => 'modalSafe'
-        ],
-        [
-          'title' => 'Submarine',
-          'image' => 'views/assets/img/portfolio/submarine.png',
-          'description' => 'Un submarino explorando las profundidades del océano.',
-          'id' => 'modalSubmarine'
-        ]
-      ];
+      // Conexión a la base de datos
+      include $_SERVER['DOCUMENT_ROOT'] . '/freelance/web/database/db.php';
 
+      // Consulta para obtener todos los proyectos del portafolio
+      $stmt = $pdo->prepare("SELECT * FROM portfolio_items");
+      $stmt->execute();
+      $portfolio_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-
-
-foreach ($portfolio_items as $item) {
-        ?>
-        <div class="col-md-6 col-lg-4 mb-5">
-          <div class="portfolio-item mx-auto" data-bs-toggle="modal" href="#<?php echo $item['id']; ?>">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
+      if ($portfolio_items) {
+        // Mostrar cada proyecto del portafolio
+        foreach ($portfolio_items as $item) {
+          ?>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <div class="portfolio-item mx-auto" data-bs-toggle="modal" href="#<?php echo 'modal' . $item['id']; ?>">
+              <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                <div class="portfolio-item-caption-content text-center text-white">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
               </div>
+              <a class="portfolio-link" data-bs-toggle="modal" href="#<?php echo 'modal' . $item['id']; ?>">
+                <img class="img-fluid" src="<?php echo $item['image']; ?>" alt="<?php echo htmlspecialchars($item['title'], ENT_QUOTES, 'UTF-8'); ?>" />
+              </a>
             </div>
-            <a class="portfolio-link" data-bs-toggle="modal" href="#<?php echo $item['id']; ?>">
-              <img class="img-fluid" src="<?php echo $item['image']; ?>" alt="<?php echo $item['title']; ?>" />
-            </a>
           </div>
-        </div>
-        <?php
+          <?php
+        }
+      } else {
+        echo "<p>No hay proyectos en el portafolio aún.</p>";
       }
       ?>
     </div>
@@ -76,54 +47,47 @@ foreach ($portfolio_items as $item) {
 </section>
 
 <!-- Modales para cada ítem del portafolio -->
-<?php foreach ($portfolio_items as $item): ?>
-  <div class="portfolio-modal modal fade" id="<?php echo $item['id']; ?>" tabindex="-1"
-    aria-labelledby="<?php echo $item['id']; ?>Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="<?php echo $item['id']; ?>Label"><?php echo $item['title']; ?></h5>
-          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <img class="img-fluid rounded mb-4" src="<?php echo $item['image']; ?>"
-                  alt="<?php echo $item['title']; ?>" />
-                <p><?php echo $item['description']; ?></p>
-                <button class="btn btn-primary" data-bs-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Cerrar ventana
-                </button>
+<?php if ($portfolio_items): ?>
+  <?php foreach ($portfolio_items as $item): ?>
+    <div class="portfolio-modal modal fade" id="<?php echo 'modal' . $item['id']; ?>" tabindex="-1"
+      aria-labelledby="<?php echo 'modal' . $item['id']; ?>Label" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="<?php echo 'modal' . $item['id']; ?>Label"><?php echo htmlspecialchars($item['title'], ENT_QUOTES, 'UTF-8'); ?></h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <img class="img-fluid rounded mb-4" src="<?php echo htmlspecialchars($item['image'], ENT_QUOTES, 'UTF-8'); ?>"
+                    alt="<?php echo htmlspecialchars($item['title'], ENT_QUOTES, 'UTF-8'); ?>" />
+                  <p><?php echo htmlspecialchars($item['description'], ENT_QUOTES, 'UTF-8'); ?></p>
+                  <?php if (!empty($item['github'])): ?>
+                    <a href="<?php echo htmlspecialchars($item['github'], ENT_QUOTES, 'UTF-8'); ?>" target="_blank" class="btn btn-dark">Ver en GitHub</a>
+                  <?php endif; ?>
+                  <?php if (!empty($item['web'])): ?>
+                    <a href="<?php echo htmlspecialchars($item['web'], ENT_QUOTES, 'UTF-8'); ?>" target="_blank" class="btn btn-primary">Ver Proyecto</a>
+                  <?php endif; ?>
+                  <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Cerrar ventana
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-<?php endforeach; ?>
+  <?php endforeach; ?>
+<?php endif; ?>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
+<STYle>.portfolio-item img {
+    width: 100%;
+    height: 300px; /* Ajusta la altura según lo que necesites */
+    object-fit: cover; /* Asegura que la imagen se recorte pero mantenga el aspecto */
+    border-radius: 5px; /* Opcional: añade un borde redondeado */
+}
+</STYle>

@@ -1,14 +1,44 @@
 <?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
-    header('Location: /freelance/web/views/pages/login.php'); // Redirige a la página de inicio de sesión
+    header('Location: /freelance/web/views/pages/login.php');
     exit();
 }
+
+// Conexión a la base de datos
+include '../../database/db.php';
+
+// Procesar el formulario de agregar ítem al portafolio
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_portfolio_item'])) {
+    $title = $_POST['title'];
+    $image = $_POST['image'];
+    $description = $_POST['description'];
+    $github = $_POST['github'];
+    $web = $_POST['web'];
+    $user_id = $_SESSION['user_id'];
+
+    // Insertar el nuevo ítem en la base de datos
+    $stmt = $pdo->prepare("INSERT INTO portfolio_items (title, image, description, github, web, user_id) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->execute([$title, $image, $description, $github, $web, $user_id]);
+}
+
+// Eliminar un ítem del portafolio
+if (isset($_GET['delete'])) {
+    $id = $_GET['delete'];
+    $stmt = $pdo->prepare("DELETE FROM portfolio_items WHERE id = ?");
+    $stmt->execute([$id]);
+    header("Location: dashboard.php#portfolio");
+    exit();
+}
+
+// Obtener todos los ítems del portafolio
+$stmt = $pdo->prepare("SELECT * FROM portfolio_items WHERE user_id = ?");
+$stmt->execute([$_SESSION['user_id']]);
+$portfolio_items = $stmt->fetchAll();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,13 +47,16 @@ if (!isset($_SESSION['user_id'])) {
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         /* Estilos personalizados */
-        body {
+        body, html {
+            height: 100%;
+            margin: 0;
             font-family: Arial, sans-serif;
             background-color: #f8f9fa;
         }
 
         #wrapper {
             display: flex;
+            min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
             transition: all 0.3s ease;
         }
 
@@ -51,34 +84,10 @@ if (!isset($_SESSION['user_id'])) {
             display: none;
         }
 
-        #sidebar-wrapper .list-group-item {
-            background-color: #343a40;
-            color: white;
-            border: none;
-            transition: background-color 0.3s;
-        }
-
-        #sidebar-wrapper .list-group-item:hover {
-            background-color: #495057;
-        }
-
-        #sidebar-wrapper .sidebar-heading {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.5rem;
-            padding: 1rem;
-            background-color: #212529;
-        }
-
-        #sidebar-wrapper.collapsed .sidebar-heading {
-            font-size: 1.5rem;
-            padding: 0.5rem;
-        }
-
         #page-content-wrapper {
-            width: 100%;
+            flex-grow: 1;
             padding: 20px;
+            min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
         }
 
         .navbar {
@@ -91,10 +100,6 @@ if (!isset($_SESSION['user_id'])) {
             border: none;
         }
 
-        .btn-toggle:hover {
-            background-color: #0056b3;
-        }
-
         .btn-logout {
             background-color: #dc3545;
             color: white;
@@ -102,17 +107,13 @@ if (!isset($_SESSION['user_id'])) {
             margin-left: 10px;
         }
 
-        .btn-logout:hover {
-            background-color: #c82333;
-        }
-
         .btn-web {
             background-color: #28a745;
             color: white;
         }
 
-        .form-group input,
-        .form-group textarea {
+        /* Estilos de la tabla y formulario */
+        .form-group input, .form-group textarea {
             width: 100%;
             padding: 10px;
             margin-bottom: 1rem;
@@ -128,15 +129,20 @@ if (!isset($_SESSION['user_id'])) {
             border-radius: 5px;
         }
 
-        .form-group button:hover {
-            background-color: #0056b3;
+        .table {
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .table th, .table td {
+            vertical-align: middle;
         }
 
         .list-group-item i {
             margin-right: 10px;
         }
 
-        /* Ajuste del ícono ☰ en el panel lateral */
         .sidebar-heading .btn-toggle {
             padding: 0;
             background: none;
@@ -144,77 +150,119 @@ if (!isset($_SESSION['user_id'])) {
         }
     </style>
 </head>
-
 <body>
-    <div class="d-flex" id="wrapper">
-        <!-- Sidebar -->
-        <div class="border-end bg-dark" id="sidebar-wrapper">
-            <div class="sidebar-heading text-white">
-                <button class="btn-toggle" id="menu-toggle">☰</button>
-            </div>
-            <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#home">
-                    <i class="fas fa-home"></i> <span>Dashboard</span>
-                </a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#portfolio">
-                    <i class="fas fa-briefcase"></i> <span>Portafolio</span>
-                </a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#contact">
-                    <i class="fas fa-envelope"></i> <span>Contactanos</span>
-                </a>
-            </div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="border-end bg-dark" id="sidebar-wrapper">
+        <div class="sidebar-heading text-white">
+            <button class="btn-toggle" id="menu-toggle">☰</button>
         </div>
-
-        <!-- Page content -->
-        <div id="page-content-wrapper">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                <div class="container-fluid">
-                    <a href="/freelance/web/" class="btn btn-web ms-auto">Ir a la web</a>
-                    <a href="/freelance/web/views/pages/logout.php" class="btn btn-logout">Cerrar sesión</a>
-                </div>
-            </nav>
-
-            <div class="container-fluid" id="content">
-                <div id="home" class="section">
-                    <h1>Dashboard</h1>
-                    <p>Bienvenido al Dashboard. Selecciona una opción del menú para ver el contenido.</p>
-                </div>
-
-                <div id="portfolio" class="section" style="display:none;">
-                    <h1>Portafolio</h1>
-                    <p>Esta es la sección de tu portafolio.</p>
-                </div>
-
-                <div id="contact" class="section" style="display:none;">
-                    <h1>Contactanos</h1>
-                    <p>Esta es la sección de contacto.</p>
-                </div>
-            </div>
+        <div class="list-group list-group-flush">
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#home">
+                <i class="fas fa-home"></i> <span>Dashboard</span>
+            </a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#portfolio">
+                <i class="fas fa-briefcase"></i> <span>Portafolio</span>
+            </a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#contact">
+                <i class="fas fa-envelope"></i> <span>Contactanos</span>
+            </a>
         </div>
     </div>
 
-    <script>
-        // Alternar el menú de la barra lateral
-        document.getElementById("menu-toggle").addEventListener("click", function () {
-            document.getElementById("sidebar-wrapper").classList.toggle("collapsed");
-        });
+    <!-- Page content -->
+    <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <div class="container-fluid">
+                <a href="/freelance/web/" class="btn btn-web ms-auto">Ir a la web</a>
+                <a href="/freelance/web/views/pages/logout.php" class="btn btn-logout">Cerrar sesión</a>
+            </div>
+        </nav>
 
-        // Cambiar entre secciones
-        const sections = document.querySelectorAll('.section');
-        document.querySelectorAll('.list-group-item').forEach(item => {
-            item.addEventListener('click', function (event) {
-                event.preventDefault();
-                sections.forEach(section => section.style.display = 'none');
-                const target = item.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(target);
-                if (targetSection) {
-                    targetSection.style.display = 'block';
-                }
-            });
-        });
-    </script>
+        <div class="container-fluid" id="content">
+            <div id="portfolio" class="section">
+                <h1>Portafolio</h1>
+                <p>Esta es la sección de tu portafolio.</p>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+                <!-- Formulario para agregar nuevo ítem -->
+                <form action="dashboard.php#portfolio" method="POST">
+                    <div class="form-group">
+                        <label for="title">Título</label>
+                        <input type="text" name="title" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">URL de la imagen</label>
+                        <input type="text" name="image" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Descripción</label>
+                        <textarea name="description" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="github">URL del Github (opcional)</label>
+                        <input type="text" name="github" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="web">URL del proyecto (opcional)</label>
+                        <input type="text" name="web" class="form-control">
+                    </div>
+                    <button type="submit" name="add_portfolio_item" class="btn btn-primary">Agregar Portafolio</button>
+                </form>
+
+                <!-- Listado de ítems del portafolio -->
+                <h2 class="mt-4">Tus proyectos</h2>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Descripción</th>
+                        <th>Imagen</th>
+                        <th>Github</th>
+                        <th>Web</th>
+                        <th>Acciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($portfolio_items as $item): ?>
+                        <tr>
+                            <td><?php echo $item['title']; ?></td>
+                            <td><?php echo $item['description']; ?></td>
+                            <td><img src="<?php echo $item['image']; ?>" width="50"></td>
+                            <td><a href="<?php echo $item['github']; ?>" target="_blank">Github</a></td>
+                            <td><a href="<?php echo $item['web']; ?>" target="_blank">Web</a></td>
+                            <td>
+                                <a href="dashboard.php?delete=<?php echo $item['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Alternar el menú de la barra lateral
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+        document.getElementById("sidebar-wrapper").classList.toggle("collapsed");
+    });
+
+    // Cambiar entre secciones
+    const sections = document.querySelectorAll('.section');
+    document.querySelectorAll('.list-group-item').forEach(item => {
+        item.addEventListener('click', function (event) {
+            event.preventDefault();
+            sections.forEach(section => section.style.display = 'none');
+            const target = item.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(target);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+        });
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
