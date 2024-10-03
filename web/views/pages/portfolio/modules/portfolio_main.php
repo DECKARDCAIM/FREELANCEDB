@@ -61,7 +61,8 @@
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-lg-8">
-                  <img class="img-fluid rounded mb-4" src="<?php echo htmlspecialchars($item['image'], ENT_QUOTES, 'UTF-8'); ?>"
+                  <!-- Controla el tamaño máximo de la imagen en el modal -->
+                  <img class="img-fluid rounded mb-4 modal-img" src="<?php echo htmlspecialchars($item['image'], ENT_QUOTES, 'UTF-8'); ?>"
                     alt="<?php echo htmlspecialchars($item['title'], ENT_QUOTES, 'UTF-8'); ?>" />
                   <p><?php echo htmlspecialchars($item['description'], ENT_QUOTES, 'UTF-8'); ?></p>
                   <?php if (!empty($item['github'])): ?>
@@ -70,7 +71,8 @@
                   <?php if (!empty($item['web'])): ?>
                     <a href="<?php echo htmlspecialchars($item['web'], ENT_QUOTES, 'UTF-8'); ?>" target="_blank" class="btn btn-primary">Ver Proyecto</a>
                   <?php endif; ?>
-                  <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">
+                  <!-- Botón de cerrar ventana en rojo -->
+                  <button class="btn btn-danger" data-bs-dismiss="modal" type="button">
                     <i class="fas fa-times"></i>
                     Cerrar ventana
                   </button>
@@ -84,10 +86,31 @@
   <?php endforeach; ?>
 <?php endif; ?>
 
-<STYle>.portfolio-item img {
-    width: 100%;
-    height: 300px; /* Ajusta la altura según lo que necesites */
-    object-fit: cover; /* Asegura que la imagen se recorte pero mantenga el aspecto */
-    border-radius: 5px; /* Opcional: añade un borde redondeado */
-}
-</STYle>
+<style>
+  /* Ajusta el tamaño de las imágenes del portafolio */
+  .portfolio-item img {
+      width: 100%;
+      height: 300px; /* Ajusta la altura según lo que necesites */
+      object-fit: cover; /* Asegura que la imagen se recorte pero mantenga el aspecto */
+      border-radius: 5px; /* Añade un borde redondeado */
+  }
+
+  /* Controla el tamaño máximo de la imagen en el modal */
+  .modal-img {
+      max-width: 100%;
+      max-height: 500px;
+      object-fit: contain; /* Mantiene la proporción sin recortar la imagen */
+  }
+
+  /* Estilo del botón cerrar en rojo */
+  .btn-danger {
+      background-color: #dc3545;
+      border-color: #dc3545;
+      color: white;
+  }
+
+  .btn-danger:hover {
+      background-color: #c82333;
+      border-color: #bd2130;
+  }
+</style>

@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 if (!isset($_SESSION['user_id'])) {
     header('Location: /freelance/web/views/pages/login.php');
@@ -58,6 +58,10 @@ $portfolio_items = $stmt->fetchAll();
 $stmt_contact = $pdo->prepare("SELECT * FROM contact_me");
 $stmt_contact->execute();
 $contacts = $stmt_contact->fetchAll();
+
+// Contar mensajes recibidos y proyectos creados
+$total_messages = count($contacts);
+$total_projects = count($portfolio_items);
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +73,7 @@ $contacts = $stmt_contact->fetchAll();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="/freelance/web/views/assets/Umg.ico" type="Umg.ico">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         /* Estilos personalizados */
         body, html {
@@ -137,21 +141,10 @@ $contacts = $stmt_contact->fetchAll();
             color: white;
         }
 
-        /* Estilos de la tabla y formulario */
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 1rem;
-            border-radius: 5px;
-            border: 1px solid #ced4da;
-        }
-
-        .form-group button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
+        .chart-container {
+            width: 50%;
+            margin: auto;
+            margin-top: 20px;
         }
 
         .table {
@@ -205,10 +198,14 @@ $contacts = $stmt_contact->fetchAll();
         </nav>
 
         <div class="container-fluid" id="content">
+            <div class="chart-container">
+                <canvas id="myChart"></canvas>
+            </div>
+            
+            <!-- Sección de Portafolio -->
             <div id="portfolio" class="section">
                 <h1>Portafolio</h1>
                 <p>Esta es la sección de tu portafolio.</p>
-
                 <!-- Formulario para agregar nuevo ítem -->
                 <form action="dashboard.php#portfolio" method="POST">
                     <div class="form-group">
@@ -290,12 +287,44 @@ $contacts = $stmt_contact->fetchAll();
                     </tbody>
                 </table>
             </div>
-
         </div>
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
+    // Datos para los gráficos
+    const totalMessages = <?php echo $total_messages; ?>;
+    const totalProjects = <?php echo $total_projects; ?>;
+
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Mensajes', 'Proyectos'],
+            datasets: [{
+                label: 'Totales',
+                data: [totalMessages, totalProjects],
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(54, 162, 235, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
     // Alternar el menú de la barra lateral
     document.getElementById("menu-toggle").addEventListener("click", function () {
         document.getElementById("sidebar-wrapper").classList.toggle("collapsed");
@@ -315,6 +344,7 @@ $contacts = $stmt_contact->fetchAll();
         });
     });
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
